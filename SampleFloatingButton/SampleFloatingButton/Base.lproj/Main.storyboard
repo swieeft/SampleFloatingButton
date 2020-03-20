@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleFloatingButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pwM-Pn-mJm">
+                                <rect key="frame" x="284" y="732" width="100" height="100"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzj-j6-b0W">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Pzj-j6-b0W" secondAttribute="height" multiplier="1:1" id="1W2-Cp-FRp"/>
+                                            <constraint firstAttribute="width" constant="100" id="ZY2-yc-TzK"/>
+                                        </constraints>
+                                        <state key="normal" image="Evening"/>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn5-sz-oUt">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xn5-sz-oUt" secondAttribute="height" multiplier="1:1" id="8nE-ac-19n"/>
+                                            <constraint firstAttribute="width" constant="100" id="WfL-N6-e8V"/>
+                                        </constraints>
+                                        <state key="normal" image="Afternoon"/>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnK-qF-MSC">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WnK-qF-MSC" secondAttribute="height" multiplier="1:1" id="2Xb-J7-l9I"/>
+                                            <constraint firstAttribute="width" constant="100" id="Cz5-tm-Vya"/>
+                                        </constraints>
+                                        <state key="normal" image="Morning"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ol-JL-2uS">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <state key="normal" image="Show"/>
+                                        <connections>
+                                            <action selector="floatingButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnS-Lv-sgU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pwM-Pn-mJm" secondAttribute="bottom" constant="30" id="Bhg-lh-5fa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pwM-Pn-mJm" secondAttribute="trailing" constant="30" id="JLl-r5-F5B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="afternoonButton" destination="xn5-sz-oUt" id="7MD-u3-5Li"/>
+                        <outlet property="eveningButton" destination="Pzj-j6-b0W" id="wuT-Az-0eh"/>
+                        <outlet property="floatingButton" destination="8Ol-JL-2uS" id="IeM-XZ-xVK"/>
+                        <outlet property="floatingStackView" destination="pwM-Pn-mJm" id="Bhh-Wg-BLz"/>
+                        <outlet property="morningButton" destination="WnK-qF-MSC" id="2xq-0G-y3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Afternoon" width="100" height="100"/>
+        <image name="Evening" width="100" height="100"/>
+        <image name="Morning" width="100" height="100"/>
+        <image name="Show" width="100" height="100"/>
+    </resources>
+</document>
