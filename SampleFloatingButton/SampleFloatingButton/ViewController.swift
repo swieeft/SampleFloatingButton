@@ -16,7 +16,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var afternoonButton: UIButton!
     @IBOutlet weak var eveningButton: UIButton!
     
-    var floatingDimView: UIView = UIView()
+    lazy var floatingDimView: UIView = {
+        let view = UIView(frame: self.view.frame)
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        view.alpha = 0
+        view.isHidden = true
+        
+        self.view.insertSubview(view, belowSubview: self.floatingStackView)
+        
+        return view
+    }()
     
     var isShowFloating: Bool = false
     
@@ -39,16 +48,12 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.5, animations: {
                 self.floatingDimView.alpha = 0
             }) { (_) in
-                self.floatingDimView.removeFromSuperview()
-                self.floatingDimView.alpha = 1
+                self.floatingDimView.isHidden = true
             }
         } else {
-            floatingDimView = UIView(frame: self.view.frame)
-            floatingDimView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-            floatingDimView.alpha = 0
-            
-            self.view.insertSubview(floatingDimView, belowSubview: floatingStackView)
          
+            self.floatingDimView.isHidden = false
+            
             UIView.animate(withDuration: 0.5) {
                 self.floatingDimView.alpha = 1
             }
