@@ -20,15 +20,13 @@ class ViewController: UIViewController {
     
     var isShowFloating: Bool = false
     
-//    lazy var buttons: [UIButton] = [self.morningButton, self.afternoonButton, self.eveningButton]
+    lazy var buttons: [UIButton] = [self.morningButton, self.afternoonButton, self.eveningButton]
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func floatingButtonAction(_ sender: UIButton) {
-
-        let buttons: [UIButton] = [self.morningButton, self.afternoonButton, self.eveningButton]
         
         if isShowFloating {
             buttons.reversed().forEach { button in
