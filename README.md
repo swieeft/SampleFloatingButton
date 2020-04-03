@@ -7,4 +7,4 @@
 
 **블로그 프로젝트 설명**
 
-[[iOS] 간단한 플로팅 버튼(Floating Button) 만들기](https://swieeft.github.io/FloatingButton/)
+[[iOS] 간단한 플로팅 버튼(Floating Button) 만들기](https://swieeft.github.io/2020/03/21/FloatingButton.html)
